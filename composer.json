@@ -57,7 +57,8 @@
     "symfony/var-exporter": "~6.4.0",
     "symfony/web-profiler-bundle": "~6.4.0",
     "friendsofphp/php-cs-fixer": "~3.57.2",
-    "oro/twig-inspector": "1.1.*"
+    "oro/twig-inspector": "1.1.*",
+    "symfony/maker-bundle": "^1.53"
   },
   "config": {
     "bin-dir": "bin",
