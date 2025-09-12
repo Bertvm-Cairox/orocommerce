@@ -3,11 +3,15 @@
 namespace Training\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityInterface;
+use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
 
 #[ORM\Entity]
 #[ORM\Table(name: 'app_demo_document')]
-class Document
+class Document implements ExtendEntityInterface
 {
+    use ExtendEntityTrait;
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
