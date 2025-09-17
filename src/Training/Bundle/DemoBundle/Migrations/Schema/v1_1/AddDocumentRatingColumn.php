@@ -19,7 +19,7 @@ class AddDocumentRatingColumn implements Migration
                 'integer',
             ['oro_options' => [
                 'extend' => [
-                    'is_extended' => true,
+                    'is_extend' => true,
                     'owner' => ExtendScope::OWNER_CUSTOM,
                 ],
                 'entity' => ['label' => 'Document rating'],

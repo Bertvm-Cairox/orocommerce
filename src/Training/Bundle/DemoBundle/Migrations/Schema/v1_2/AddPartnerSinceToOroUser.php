@@ -18,7 +18,7 @@ class AddPartnerSinceToOroUser implements Migration
             'datetime',
             ['oro_options' => [
                 'extend' => [
-                    'is_extended' => true,
+                    'is_extend' => true,
                     'owner' => ExtendScope::OWNER_CUSTOM,
                     'nullable' => true,
                     'on_delete' => 'SET NULL'
