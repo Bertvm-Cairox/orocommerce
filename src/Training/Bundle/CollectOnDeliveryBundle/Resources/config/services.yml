@@ -1,0 +1,21 @@
+parameters:
+  collect_on_delivery.method.identifier_prefix.collect_on_delivery: 'collect_on_delivery'
+
+services:
+  collect_on_delivery.generator.collect_on_delivery_config_identifier:
+    parent: oro_integration.generator.prefixed_identifier_generator
+    public: true
+    arguments:
+      - '%collect_on_delivery.method.identifier_prefix.collect_on_delivery%'
+
+  collect_on_delivery.integration.channel:
+    class: Training\Bundle\CollectOnDeliveryBundle\Integration\CollectOnDeliveryChannelType
+    public: true
+    tags:
+      - { name: oro_integration.channel, type: collect_on_delivery }
+
+  collect_on_delivery.integration.transport:
+    class: Training\Bundle\CollectOnDeliveryBundle\Integration\CollectOnDeliveryTransport
+    public: true
+    tags:
+      - { name: oro_integration.transport, type: collect_on_delivery, channel_type: collect_on_delivery }
